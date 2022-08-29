@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
-export function getStaticProps() {
+export async function getStaticProps() {
   return {
     props: {
-      heading:
-        'Update and Replace Content in Next.js and Avoid React Hydration Errors',
+      heading: 'The best headlines around!',
       details: 'This response is static.',
     },
   };
@@ -22,9 +21,10 @@ export default function Home({ heading, details }) {
       <main>
         <h1 id="heading">{heading}</h1>
 
-        <p id="details">{details}</p>
-
-        <p>Wow</p>
+        <p>
+          Update and replace content in Next.js and avoid React hydration
+          errors. <span className="details">{details}</span>
+        </p>
       </main>
     </div>
   );
